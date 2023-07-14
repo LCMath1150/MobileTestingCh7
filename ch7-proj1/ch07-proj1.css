@@ -16,7 +16,6 @@ header {
    padding: 0 var(--spacer-base);
    background-color: var(--color-back-dark);
    height: var(--header-height);
-
 }
 header h1 {
     margin: 0;   
@@ -57,11 +56,66 @@ button {
 
 
 /* add your styles here */
+header {
+    display:flex;
+    flex-direction: row;
+    flex-wrap:nowrap;
+    justify-content:space-between;
+    align-items:center;
+ }
+
+ .container {
+    display:flex;
+    flex-direction: row;
+    flex-wrap:wrap;
+    justify-content: center;
+    align-items: center;
+ }
+
+ .cards {
+    display:flex;
+    flex-direction: row;
+    flex-wrap:wrap;
+    justify-content: space-between;
+    align-items: center;
+ }
+
+ .card {
+    width:24%;
+ }
+
+ .card img {
+    max-width: 100%;
+ }
+
+ .card img:hover {
+    filter:saturate(150%);
+ }
+
+ button {
+    opacity: 0.0;
+ }
+
+ .card:hover {
+    box-shadow: 0 0 11px rgba(33,33,33,.2); ;
+ }
+ .card:hover button {
+    opacity: 1.0;
+    transition: 1s ease;
+ }
 
 
 
 
 /* styles for mobile protrait screen */
+@media only screen and (max-width:480px)
+{
+    .card {width:100%}
+}
 
 
 /* styles for tablet portrait and mobile landscape screens */
+@media only screen and (min-width:481px) and (max-width:768px)
+{
+    .card {width:45%}
+}
